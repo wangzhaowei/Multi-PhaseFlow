@@ -30,10 +30,10 @@ namespace WZW {
     public:
         SPH(int numberOfParticles, double smoothKernalRadius):_kernals(smoothKernalRadius){
             _particles.reserve(numberOfParticles);
-            _smoothKernalRadius = smoothKernalRadius;
+            _smoothRadius = smoothKernalRadius;
         }
         
-        void step(float dt);
+        virtual void step(float dt);
     };
 }
 
