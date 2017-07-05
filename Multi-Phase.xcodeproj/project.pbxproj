@@ -7,7 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		948673DB1F0665AD009CD641 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 948673D91F0665AD009CD641 /* Particle.cpp */; };
+		948673E11F0665F5009CD641 /* MathType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 948673DF1F0665F5009CD641 /* MathType.cpp */; };
+		949905D41F0629A000B3BA68 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 949905D11F0629A000B3BA68 /* libglfw.3.2.dylib */; };
+		949905D51F0629A000B3BA68 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 949905D21F0629A000B3BA68 /* libglfw.3.2.dylib */; };
+		949905D61F0629A000B3BA68 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 949905D31F0629A000B3BA68 /* libglfw.3.2.dylib */; };
+		94A33F2A1F0A178300F18413 /* SPH.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94A33F281F0A178300F18413 /* SPH.cpp */; };
+		94A93EDA1F062CE10059691F /* GLWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94A93ED81F062CE10059691F /* GLWrapper.cpp */; };
 		94A96F021F061E6200935599 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94A96F011F061E6200935599 /* main.cpp */; };
+		94A96F0A1F061E7F00935599 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A96F081F061E7F00935599 /* GLUT.framework */; };
+		94A96F0B1F061E7F00935599 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A96F091F061E7F00935599 /* OpenGL.framework */; };
+		94F7B7061F0B9AC800F91375 /* SpaceGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94F7B7041F0B9AC800F91375 /* SpaceGrid.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +33,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		948673D91F0665AD009CD641 /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
+		948673DA1F0665AD009CD641 /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Particle.h; sourceTree = "<group>"; };
+		948673DF1F0665F5009CD641 /* MathType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MathType.cpp; sourceTree = "<group>"; };
+		948673E01F0665F5009CD641 /* MathType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathType.h; sourceTree = "<group>"; };
+		949905D11F0629A000B3BA68 /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
+		949905D21F0629A000B3BA68 /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
+		949905D31F0629A000B3BA68 /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
+		94A33F281F0A178300F18413 /* SPH.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SPH.cpp; sourceTree = "<group>"; };
+		94A33F291F0A178300F18413 /* SPH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPH.h; sourceTree = "<group>"; };
+		94A93ED81F062CE10059691F /* GLWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLWrapper.cpp; sourceTree = "<group>"; };
+		94A93ED91F062CE10059691F /* GLWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLWrapper.h; sourceTree = "<group>"; };
 		94A96EFE1F061E6200935599 /* Multi-Phase */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Multi-Phase"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A96F011F061E6200935599 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		94A96F081F061E7F00935599 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		94A96F091F061E7F00935599 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		94F7B7041F0B9AC800F91375 /* SpaceGrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpaceGrid.cpp; sourceTree = "<group>"; };
+		94F7B7051F0B9AC800F91375 /* SpaceGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceGrid.h; sourceTree = "<group>"; };
+		94F7B7071F0BBB7B00F91375 /* Headers.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Headers.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +58,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				949905D41F0629A000B3BA68 /* libglfw.3.2.dylib in Frameworks */,
+				949905D51F0629A000B3BA68 /* libglfw.3.2.dylib in Frameworks */,
+				949905D61F0629A000B3BA68 /* libglfw.3.2.dylib in Frameworks */,
+				94A96F0A1F061E7F00935599 /* GLUT.framework in Frameworks */,
+				94A96F0B1F061E7F00935599 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +72,11 @@
 		94A96EF51F061E6200935599 = {
 			isa = PBXGroup;
 			children = (
+				949905D11F0629A000B3BA68 /* libglfw.3.2.dylib */,
+				949905D21F0629A000B3BA68 /* libglfw.3.2.dylib */,
+				949905D31F0629A000B3BA68 /* libglfw.3.2.dylib */,
+				94A96F081F061E7F00935599 /* GLUT.framework */,
+				94A96F091F061E7F00935599 /* OpenGL.framework */,
 				94A96F001F061E6200935599 /* Multi-Phase */,
 				94A96EFF1F061E6200935599 /* Products */,
 			);
@@ -58,6 +94,17 @@
 			isa = PBXGroup;
 			children = (
 				94A96F011F061E6200935599 /* main.cpp */,
+				94A93ED91F062CE10059691F /* GLWrapper.h */,
+				94A93ED81F062CE10059691F /* GLWrapper.cpp */,
+				948673DA1F0665AD009CD641 /* Particle.h */,
+				948673D91F0665AD009CD641 /* Particle.cpp */,
+				948673E01F0665F5009CD641 /* MathType.h */,
+				948673DF1F0665F5009CD641 /* MathType.cpp */,
+				94A33F291F0A178300F18413 /* SPH.h */,
+				94A33F281F0A178300F18413 /* SPH.cpp */,
+				94F7B7051F0B9AC800F91375 /* SpaceGrid.h */,
+				94F7B7041F0B9AC800F91375 /* SpaceGrid.cpp */,
+				94F7B7071F0BBB7B00F91375 /* Headers.pch */,
 			);
 			path = "Multi-Phase";
 			sourceTree = "<group>";
@@ -119,6 +166,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				94A96F021F061E6200935599 /* main.cpp in Sources */,
+				94A33F2A1F0A178300F18413 /* SPH.cpp in Sources */,
+				94F7B7061F0B9AC800F91375 /* SpaceGrid.cpp in Sources */,
+				948673DB1F0665AD009CD641 /* Particle.cpp in Sources */,
+				94A93EDA1F062CE10059691F /* GLWrapper.cpp in Sources */,
+				948673E11F0665F5009CD641 /* MathType.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +180,7 @@
 		94A96F031F061E6200935599 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -170,7 +222,7 @@
 		94A96F041F061E6200935599 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -205,6 +257,20 @@
 		94A96F061F061E6200935599 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Multi-Phase/Headers.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(glew_header)",
+					"$(glfw_header)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(glew_lib)",
+					"$(glfw_lib)",
+					/usr/local/Cellar/glfw/3.2.1/lib,
+				);
+				OTHER_LDFLAGS = "-lGLEW";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -212,6 +278,20 @@
 		94A96F071F061E6200935599 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Multi-Phase/Headers.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(glew_header)",
+					"$(glfw_header)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(glew_lib)",
+					"$(glfw_lib)",
+					/usr/local/Cellar/glfw/3.2.1/lib,
+				);
+				OTHER_LDFLAGS = "-lGLEW";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -235,6 +315,7 @@
 				94A96F071F061E6200935599 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
