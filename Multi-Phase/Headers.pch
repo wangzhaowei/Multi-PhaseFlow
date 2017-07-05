@@ -17,6 +17,14 @@
 #include <string>
 #include "MathType.h"
 
+#define WZW_PRIVATE_PROPERTY(type, name)\
+private: \
+type name;  \
+void set##name(type value){name = value;}    \
+public: \
+type get##name(){return name;}
+
+
 #if DEBUG
 
 #include <assert.h>
@@ -25,7 +33,7 @@
 
 #else
 
-#undef wzw_assert
+#define wzw_assert(e) 
 
 #endif
 

@@ -19,8 +19,14 @@ namespace WZW {
     class SPH{
     private:
         std::vector<Particle> _particles;
-        double _smoothKernalRadius;
         WZW::Kernals _kernals;
+        WZW_PRIVATE_PROPERTY(double, _smoothRadius);
+        
+    protected:
+        virtual void computePressure();
+        virtual void computeForce();
+        virtual void advance();
+        
     public:
         SPH(int numberOfParticles, double smoothKernalRadius):_kernals(smoothKernalRadius){
             _particles.reserve(numberOfParticles);

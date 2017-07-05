@@ -14,36 +14,61 @@
 #include <MathType.h>
 
 namespace WZW {
-    class SpaceGridParticleDelegate{
+    class SpaceGridParticle{
     public:
         virtual Vector3f getPosition() =0;
-        virtual SpaceGridParticleDelegate* getNext() =0;
-        virtual void setNext(SpaceGridParticleDelegate* next) =0;
+        virtual SpaceGridParticle* getNext() =0;
+        virtual void setNext(SpaceGridParticle* next) =0;
     };
     
     class SpaceGrid {
     private:
         //  This array stores IDs that are the maximum in each cell
-        std::vector<SpaceGridParticleDelegate*> _heads;
-        Vector3f _min;
-        Vector3f _max;
-        Vector3i _resolution;
-        
-        Vector3i _cellSize;
-        
-        std::vector<SpaceGridParticleDelegate*>& getHeads(){
+        std::vector<SpaceGridParticle*> _heads;
+        std::vector<SpaceGridParticle*>& getHeads(){
             return _heads;
         }
         
+        Vector3i& getResolutionReference(){
+            return _resolution;
+        }
+        
+        WZW_PRIVATE_PROPERTY(Vector3f, _min);
+        WZW_PRIVATE_PROPERTY(Vector3f, _max);
+        WZW_PRIVATE_PROPERTY(Vector3i, _resolution);
+        WZW_PRIVATE_PROPERTY(Vector3i, _cellSize);
+        WZW_PRIVATE_PROPERTY(Vector3f, _gridSize);
+        
+//        Vector3f _min;
+//        Vector3f _max;
+//        Vector3i _resolution;
+        
+//        Vector3i _cellSize;
+        
     public:
-        SpaceGrid(Vector3f min, Vector3f max, Vector3i resolution);
+        
+        SpaceGridParticle* getGridParticleAtIndex(int idx){
+            if (idx < 0 || idx >= getHeads().size()) {
+                wzw_assert("the idx out of range");
+                return nullptr;
+            }
+            
+            return getHeads()[idx];
+        }
+        
+        SpaceGrid(Vector3f min, Vector3f max, Vector3i resolution, float sim_scale, float border);
         
         //  This method re-calculate which particles contained in each cell
-        void resetCell(std::vector<SpaceGridParticleDelegate*>& particles);
+        void insertParticles(std::vector<SpaceGridParticle*>& particles);
         
         //  This method calculate cell number with position
         //  The cell number start at 0
-        int findCell(Vector3f position);
+        int getGridCellIndex(Vector3f pos);
+        
+        Vector3i getGridCellIndexVec3i(Vector3f pos);
+        
+        
+        void findCells(Vector3f pos, float radius, int* gridCell);
     };
 
 }

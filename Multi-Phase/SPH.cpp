@@ -11,5 +11,22 @@
 using namespace WZW;
 
 void SPH::step(float dt){
+    computePressure();
+    computeForce();
+    advance();
+}
+
+void SPH::computePressure(){
+    wzw_assert("The method has not done");
     
+    //h^2
+    float h2 = _smoothRadius * _smoothRadius;
+}
+
+void SPH::computeForce(){
+    wzw_assert("The method has not done");
+}
+
+void SPH::advance(){
+    wzw_assert("The method has not done");
 }

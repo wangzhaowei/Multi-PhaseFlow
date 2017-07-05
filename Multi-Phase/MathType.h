@@ -41,6 +41,7 @@ public:
         return ret;
     }
     
+    
     VectorT<T, numOfDimension> operator+(VectorT<T, numOfDimension> other){
         VectorT<T, numOfDimension> ret;
         for(int i = 0; i < numOfDimension; i++){
@@ -57,36 +58,6 @@ public:
         return ret;
     }
     
-    VectorT<T, numOfDimension> operator*(int other){
-        VectorT<T, numOfDimension> ret;
-        for(int i = 0; i < numOfDimension; i++){
-            ret[i] = elements[i] * other;
-        }
-        return ret;
-    }
-    
-    VectorT<T, numOfDimension> operator/(int other){
-        VectorT<T, numOfDimension> ret;
-        for(int i = 0; i < numOfDimension; i++){
-            ret[i] = elements[i] / other;
-        }
-        return ret;
-    }
-    
-    VectorT<T, numOfDimension>& operator*=(int other){
-        for(int i = 0; i < numOfDimension; i++){
-            elements[i] *= other;
-        }
-        return *this;
-    }
-    
-    VectorT<T, numOfDimension>& operator/=(int other){
-        for(int i = 0; i < numOfDimension; i++){
-            elements[i] /= other;
-        }
-        return *this;
-    }
-    
     T& operator[](int idx){
         if(idx < 0 || idx >= numOfDimension)
             throw std::string("The idx out of range");
@@ -97,6 +68,58 @@ public:
         if(idx < 0 || idx >= numOfDimension)
             throw std::string("The idx out of range");
         return elements[idx];
+    }
+    
+    template <typename ValueType>
+    VectorT<T, numOfDimension> operator+(ValueType other){
+        VectorT<T, numOfDimension> ret;
+        for(int i = 0; i < numOfDimension; i++){
+            ret[i] = elements[i] + other;
+        }
+        return ret;
+    }
+    
+    template <typename ValueType>
+    VectorT<T, numOfDimension> operator-(ValueType other){
+        VectorT<T, numOfDimension> ret;
+        for(int i = 0; i < numOfDimension; i++){
+            ret.elements[i] = elements[i] - other;
+        }
+        return ret;
+    }
+    
+    template <typename ValueType>
+    VectorT<T, numOfDimension> operator*(ValueType other){
+        VectorT<T, numOfDimension> ret;
+        for(int i = 0; i < numOfDimension; i++){
+            ret[i] = elements[i] * other;
+        }
+        return ret;
+    }
+    
+    template <typename ValueType>
+    VectorT<T, numOfDimension> operator/(ValueType other){
+        VectorT<T, numOfDimension> ret;
+        for(int i = 0; i < numOfDimension; i++){
+            ret[i] = elements[i] / other;
+        }
+        return ret;
+    }
+    
+    template <typename ValueType>
+    VectorT<T, numOfDimension>& operator*=(ValueType other){
+        for(int i = 0; i < numOfDimension; i++){
+            elements[i] *= other;
+        }
+        return *this;
+    }
+    
+    template <typename ValueType>
+    VectorT<T, numOfDimension>& operator/=(ValueType other){
+        for(int i = 0; i < numOfDimension; i++){
+            elements[i] /= other;
+        }
+        return *this;
     }
 };
 

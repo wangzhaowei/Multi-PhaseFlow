@@ -14,7 +14,7 @@
 #include "SpaceGrid.h"
 
 namespace WZW {
-    class Particle : public virtual SpaceGridParticleDelegate{
+    class Particle : public SpaceGridParticle{
     private:
         Vector3f position;
         Vector3f velocity;
@@ -23,14 +23,14 @@ namespace WZW {
         float density0;
         float density;
         
-        SpaceGridParticleDelegate* _next;
+        SpaceGridParticle* _next;
         
     public:
-        SpaceGridParticleDelegate* getNext(){
+        SpaceGridParticle* getNext(){
             return _next;
         }
         
-        void setNext(SpaceGridParticleDelegate* next){
+        void setNext(SpaceGridParticle* next){
             _next = next;
         }
         
